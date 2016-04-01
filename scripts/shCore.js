@@ -342,6 +342,13 @@ var sh = {
 			
 			target.parentNode.replaceChild(element, target);
 		}
+				
+        //add_by_wp fix_bug_of_row_count
+        var guttelines=$('.gutter .line');
+        var codelines=$('.code .line');
+        for(i=0;i<$(guttelines).length;i++){
+            $(guttelines).eq(i).css('height',$(codelines).eq(i).css('height'))
+        }
 	},
 
 	/**
